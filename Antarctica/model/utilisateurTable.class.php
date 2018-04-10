@@ -18,7 +18,7 @@ class utilisateurTable
   public static function getUserById($id)
   {
 	$connection = new dbconnection() ;
-    $sql = "select * from jabaianb.utilisateur where identifiant='".$id."'";
+    $sql = "select * from jabaianb.utilisateur where id='".$id."'";
 
     $res = $connection->doQuery( $sql );
     

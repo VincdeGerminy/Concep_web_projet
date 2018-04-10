@@ -4,15 +4,13 @@ abstract class basemodel
 {
  private $data;
  
- public function basemodel($tab) {
-	 $data = array();
-	 foreach ($tab as $key => $valeur) {
-		 _set($data[$key],$valeur);
+ public function basemodel($t = null) {
+ 	 $data = array();
+	 if ($t != null) {
+		 foreach ($t as $key => $valeur) {
+		  _set($key, $valeur);
+		 }
 	 }
- }
- 
- public function basemodel2() {
-	$data = array();
  }
  
  public function _set($key,$valeur) {

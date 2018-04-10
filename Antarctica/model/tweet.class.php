@@ -2,11 +2,11 @@
 
 class tweet extends basemodel{
 
-	public function getPost($idTweet) {
+	public function getPost() {
 		$connection = new dbconnection() ;
-		$sql = "select texte from jabaianb.tweet join jabaianb.post on tweet.post=post.id where tweet.id='".$idTweet."'" ;
+		$sql = "select post.* from jabaianb.tweet join jabaianb.post on tweet.post=post.id where tweet.id='".$this->id."'" ;
 
-		$res = $connection->doQuery( $sql );
+		$res = $connection->doQueryObject( $sql, "post" );
 
 		if($res === false)
 		return false ;
@@ -14,9 +14,9 @@ class tweet extends basemodel{
 		return $res ;
 	}
 	
-	public function getParent($idTweet) {
+	public function getParent() {
 		$connection = new dbconnection() ;
-		$sql = "select identifiant,nom,prenom from jabaianb.tweet join jabaianb.utilisateur on tweet.parent=utilisateur.id where tweet.id='".$idTweet."'";
+		$sql = "select identifiant,nom,prenom from jabaianb.tweet join jabaianb.utilisateur on tweet.parent=utilisateur.id where tweet.id='".$this->id."'";
 		$res = $connection->doQuery( $sql );
 
 		if($res === false)
@@ -25,9 +25,9 @@ class tweet extends basemodel{
 		return $res ;
 	} 
 	
-	public function getLikes($idTweet) {
+	public function getLikes() {
 		$connection = new dbconnection() ;
-		$sql = "select nbVotes from jabaianb.tweet where tweet.id='".$idTweet."'";
+		$sql = "select nbVotes from jabaianb.tweet where tweet.id='".$this->id."'";
 		$res = $connection->doQuery( $sql );
 
 		if($res === false)

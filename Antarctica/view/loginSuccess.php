@@ -2,6 +2,7 @@
 
 if(isset($_SESSION["user"]))
 {
+	echo 'he connec';
 	context::redirect("Antarctica.php");
 }
 

@@ -72,4 +72,12 @@ class mainController
 		}
 		return context::SUCCESS;
 	}
+	
+	public static function display_profile($request,$context) {
+		if(key_exists("id", $request))
+		{
+			$context->id =  $request['id'];
+		}
+		return context::SUCCESS;
+	}
 }

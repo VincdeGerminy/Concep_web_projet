@@ -16,6 +16,7 @@
 	echo 'prenom: ', $ut[0]["prenom"], "<br/>";
 	echo 'statut: ', $ut[0]["statut"], "<br/>";
 	$tt=tweetTable::getTweetsPostedBy($ut[0]["id"]);
+	$connection = new dbconnection();
 	foreach ($tt as $key => $value) {
 		$p = $value->getPost();
 		include("Antarctica/view/tweetView.php");

@@ -80,4 +80,15 @@ class mainController
 		}
 		return context::SUCCESS;
 	}
+	
+	public static function upvote($request,$context) {
+		$newVote= new vote();
+		$newVote->id=false;
+		$newVote->utilisateur=$_SESSION["user"][0]["id"];
+		$newVote->message=$_REQUEST['idT'];
+		if($newVote->save()){
+			return context::SUCCESS;
+		}
+		else return context::ERROR;	
+	}
 }

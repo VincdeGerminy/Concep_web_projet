@@ -21,7 +21,7 @@
 				echo '<img id="logo" src="https://pedago02a.univ-avignon.fr/~uapv1602104/images/undefined_avatar.png" height="100px"/>';
 			}
 			else {
-				echo "avatar: ".$_SESSION["user"][0]["avatar"];	
+				echo 'avatar: <img src="'.$_SESSION["user"][0]["avatar"].'" height="100px"/>';	
 			}	
 			echo $_SESSION["user"][0]["nom"];
 			echo " ";

@@ -18,7 +18,7 @@
 		public static function getTweetsPostedBy($id)
 		{
 			$connection = new dbconnection() ;
-			$sql = "select * from jabaianb.tweet where parent='".$id."'" ;
+			$sql = "select tweet.* from jabaianb.tweet join jabaianb.post on (tweet.post = post.id) where emetteur='".$id."' ORDER BY post.date DESC" ;
 
 			$res = $connection->doQueryObject( $sql, "tweet" );
 

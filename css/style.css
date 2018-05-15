@@ -1,6 +1,7 @@
 body{
 	background: linear-gradient(to top left, #CFA0E9 30%, #318CE7);
 	height: 100vh;
+	overflow: hidden;
 }
 
 .title{
@@ -17,13 +18,17 @@ body{
 	text-align: left;
 }
 
+.banner {
+	position:fixed;
+}
+
 .title #name{
 	text-align: center;
 }
 
 .log{
 	position: fixed;
-	top: 5px;
+	top: 0px;
 	right: 5px;
 	padding: 5px 15px;
 	border: solid thin;
@@ -38,4 +43,63 @@ body{
 .log a:visited{
 	color: inherit;
 	text-decoration: inherit;
+}
+
+.users{
+	border: 2px solid cyan;
+    border-radius: 5px;
+	position: fixed;
+	border: 2px solid cyan;
+    border-radius: 5px;
+	position: fixed;
+	top: 200px;
+	bottom: 0px;
+	right: 0px;
+	left: 75%;
+	overflow-y:auto;
+}
+
+.contenu{
+	border: 2px solid cyan;
+    border-radius: 5px;
+	position:fixed;
+	background:white;
+	overflow:auto;
+	top: 200px;
+	bottom: 0px;
+	right: 26%;
+	left: 26%;
+}
+
+.users_title{
+	border: 2px solid cyan;
+    border-radius: 5px;
+    position: -webkit-sticky;
+	position:sticky;
+	top: 0px;
+	background:blue;
+}
+
+.profil{
+	border: 2px solid cyan;
+    border-radius: 5px;
+	position: fixed;
+	left: 0px;
+	height:300px;
+	top:200px;
+	
+} 
+
+.tweet_box{
+	border: 2px solid cyan;
+    border-radius: 5px;
+	position: fixed;
+	left: 0px;
+	top:510px;
+	
+}
+
+.tweet{
+	border: 2px solid cyan;
+    border-radius: 5px;
 }

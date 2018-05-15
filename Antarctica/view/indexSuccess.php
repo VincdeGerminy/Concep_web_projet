@@ -17,5 +17,4 @@
 				<a href="?action=logout">Logout</a>
 			</div>';
 	}
-
 ?>
